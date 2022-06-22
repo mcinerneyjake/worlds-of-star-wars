@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   axios({
     method: 'GET',
-    url: 'https://swapi.dev/api/planets/10',
+    url: 'https://swapi.dev/api/planets',
   })
     .then((response) => {
       console.log(response);

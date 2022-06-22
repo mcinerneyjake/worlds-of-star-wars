@@ -13,11 +13,10 @@ function PlanetList() {
 
   return (
     <div>
-      {planets.name}
-      {/* {planets &&
+      {planets &&
         planets.map((planet) => {
-          return <div>{planet}</div>;
-        })} */}
+          return <div id={planet.name}>{planet.name}</div>;
+        })}
     </div>
   );
 }
