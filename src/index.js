@@ -14,7 +14,7 @@ function* fetchPlanets() {
     console.log('These are the planets in the fetchPlanets saga function:', planets.data);
     yield put({
       type: 'SET_PLANETS',
-      payload: planets.data,
+      payload: planets.data.results,
     });
   } catch (error) {
     console.log('GET planets error:', error);
