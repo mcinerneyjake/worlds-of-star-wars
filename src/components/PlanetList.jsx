@@ -13,13 +13,16 @@ function PlanetList() {
     dispatch({
       type: 'FETCH_PEOPLE',
     });
-  }, []);
+  }, [dispatch]);
+
+  console.log('planets****************************', planets);
 
   return (
     <div className='planets-container'>
       <ul>
         {planets &&
           planets.map((planet) => {
+            console.log('planet', planet);
             return (
               <li id={planet.name} className='individual-planet'>
                 {planet.name}
