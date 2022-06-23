@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PlanetItem from './PlanetItem';
 import '../styles/App.css';
 
 function PlanetList() {
@@ -20,11 +21,7 @@ function PlanetList() {
       <ul>
         {planets &&
           planets.map((planet) => {
-            return (
-              <li id={planet.name} className='individual-planet'>
-                {planet.name}
-              </li>
-            );
+            return <PlanetItem id={planet.name} planet={planet} />;
           })}
       </ul>
     </div>
