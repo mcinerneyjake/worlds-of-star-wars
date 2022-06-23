@@ -41,14 +41,14 @@ function* rootSaga() {
 
 const planetReducer = (state = [], action) => {
   if (action.type === 'SET_PLANETS') {
-    return [action.payload];
+    return action.payload;
   }
   return state;
 };
 
 const peopleReducer = (state = [], action) => {
   if (action.type === 'SET_PEOPLE') {
-    return [action.payload];
+    return action.payload;
   }
   return state;
 };
