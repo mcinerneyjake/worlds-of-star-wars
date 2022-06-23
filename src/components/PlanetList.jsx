@@ -10,14 +10,21 @@ function PlanetList() {
     dispatch({
       type: 'FETCH_PLANETS',
     });
-  }, [dispatch]);
+    dispatch({
+      type: 'FETCH_PEOPLE',
+    });
+  }, []);
 
   return (
     <div className='planets-container'>
       <ul>
         {planets &&
           planets.map((planet) => {
-            return <li id={planet.name} className='individual-planet'>{planet.name}</li>;
+            return (
+              <li id={planet.name} className='individual-planet'>
+                {planet.name}
+              </li>
+            );
           })}
       </ul>
     </div>
