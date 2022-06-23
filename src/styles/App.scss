@@ -1,0 +1,66 @@
+@import '../sass-variables/Variables.scss';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $bodyFont;
+  background-color: $starWarsBlack;
+}
+
+.header-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.nav-header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  font-size: 2em;
+  border: 3px solid $starWarsWhite;
+  width: auto;
+  margin: 10px 200px 20px 200px;
+}
+
+.nav-link {
+  margin: 15px;
+  color: $starWarsWhite;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: $navBarHover;
+}
+
+.nav-link:active {
+  color: $navBarActive;
+}
+
+.nav-link:visited {
+  color: $starWarsWhite;
+}
+
+.planets-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $starWarsYellow;
+}
+
+.individual-planet {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+  border-radius: 6%;
+  list-style: none;
+}
