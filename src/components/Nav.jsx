@@ -13,10 +13,10 @@ function Nav() {
           Home
         </Link>
         <Link to='/planet-name' className='nav-link'>
-          Planet Name
+          Planet
         </Link>
         <Link to='/resident-name' className='nav-link'>
-          Resident Name
+          Residents
         </Link>
         <Link to='/contact' className='nav-link'>
           Contact
