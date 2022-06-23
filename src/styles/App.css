@@ -7,7 +7,18 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("../images/space.png");
+  min-width: 100%;
+  min-height: 100vh;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  list-style: none;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+html ::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .header-container {
@@ -23,8 +34,8 @@ html {
   text-align: center;
   align-items: center;
   justify-content: center;
-  overflow: auto;
-  font-size: 2em;
+  overflow: hidden;
+  font-size: 2rem;
   border: 3px solid #ffffff;
   width: auto;
   margin: 10px 200px 20px 200px;
@@ -50,6 +61,7 @@ html {
 
 .planets-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -57,9 +69,26 @@ html {
 }
 
 .individual-planet {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  border: 2px solid #333;
+  border: 2px solid #ffffff;
+  border-radius: 6%;
+  list-style: none;
+}
+
+.people-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fee81c;
+}
+
+.individual-person {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
   border-radius: 6%;
   list-style: none;
 }/*# sourceMappingURL=App.css.map */

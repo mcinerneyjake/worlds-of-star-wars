@@ -6,12 +6,12 @@ function PeopleList() {
   const people = useSelector((store) => store.peopleReducer);
 
   return (
-    <div className='planets-container'>
+    <div className='people-container'>
       <ul>
         {people &&
           people.map((person) => {
             return (
-              <li id={person.name} className='individual-planet'>
+              <li id={person.name} className='individual-person'>
                 {person.name}
               </li>
             );
