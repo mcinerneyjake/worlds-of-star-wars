@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/App.css';
-import worldsOfStarWars from '../images/worldofstarwars.png';
+import worldsOfStarWars from '../images/worldsofstarwars.png';
 
 function Nav() {
   return (
