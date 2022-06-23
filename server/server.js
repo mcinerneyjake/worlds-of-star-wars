@@ -7,6 +7,7 @@ const app = express();
 
 // Route includes
 const planetsRouter = require('./routes/planets.router');
+const peopleRouter = require('./routes/people.router');
 
 // CORS
 app.use(cors());
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Routes */
 app.use('/planets', planetsRouter);
+app.use('/people', peopleRouter);
 
 // Serve static files
 app.use(express.static('build'));

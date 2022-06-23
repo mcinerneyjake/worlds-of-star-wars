@@ -21,12 +21,33 @@ function* fetchPlanets() {
   }
 }
 
+function* fetchPeople() {
+  try {
+    const people = yield axios.get('http://localhost:5000/people');
+    console.log('These are the people in the fetchPeople saga function:', people.data);
+    yield put({
+      type: 'SET_PEOPLE',
+      payload: people.data.results,
+    });
+  } catch (error) {
+    console.log('GET people error:', error);
+  }
+}
+
 function* rootSaga() {
   yield takeEvery('FETCH_PLANETS', fetchPlanets);
+  yield takeEvery('FETCH_PEOPLE', fetchPeople);
 }
 
 const planetReducer = (state = [], action) => {
   if (action.type === 'SET_PLANETS') {
+    return action.payload;
+  }
+  return state;
+};
+
+const peopleReducer = (state = [], action) => {
+  if (action.type === 'SET_PEOPLE') {
     return action.payload;
   }
   return state;
@@ -37,6 +58,7 @@ const sagaMiddleware = createSagaMiddleware();
 const storeInstance = createStore(
   combineReducers({
     planetReducer,
+    peopleReducer,
   }),
   applyMiddleware(sagaMiddleware, logger)
 );
