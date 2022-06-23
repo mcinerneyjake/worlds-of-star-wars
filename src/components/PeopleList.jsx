@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import '../styles/App.css';
 
 function PeopleList() {
-  const dispatch = useDispatch();
   const people = useSelector((store) => store.peopleReducer);
-
-  useEffect(() => {
-    dispatch({
-      type: 'FETCH_PEOPLE',
-    });
-  }, [dispatch]);
 
   return (
     <div className='planets-container'>

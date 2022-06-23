@@ -10,11 +10,11 @@ import axios from 'axios';
 
 function* fetchPlanets() {
   try {
-    const planets = yield axios.get('http://localhost:5000/planets');
+    const planets = yield axios.get('/planets');
     console.log('These are the planets in the fetchPlanets saga function:', planets.data);
     yield put({
       type: 'SET_PLANETS',
-      payload: planets.data.results,
+      payload: planets.data,
     });
   } catch (error) {
     console.log('GET planets error:', error);
@@ -23,11 +23,11 @@ function* fetchPlanets() {
 
 function* fetchPeople() {
   try {
-    const people = yield axios.get('http://localhost:5000/people');
+    const people = yield axios.get('/people');
     console.log('These are the people in the fetchPeople saga function:', people.data);
     yield put({
       type: 'SET_PEOPLE',
-      payload: people.data.results,
+      payload: people.data,
     });
   } catch (error) {
     console.log('GET people error:', error);
@@ -41,14 +41,14 @@ function* rootSaga() {
 
 const planetReducer = (state = [], action) => {
   if (action.type === 'SET_PLANETS') {
-    return action.payload;
+    return [action.payload];
   }
   return state;
 };
 
 const peopleReducer = (state = [], action) => {
   if (action.type === 'SET_PEOPLE') {
-    return action.payload;
+    return [action.payload];
   }
   return state;
 };
