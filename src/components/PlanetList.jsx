@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import '../styles/App.css';
 
 function PlanetList() {
   const dispatch = useDispatch();
@@ -12,11 +13,13 @@ function PlanetList() {
   }, [dispatch]);
 
   return (
-    <div>
-      {planets &&
-        planets.map((planet) => {
-          return <div id={planet.name}>{planet.name}</div>;
-        })}
+    <div className='planets-container'>
+      <ul>
+        {planets &&
+          planets.map((planet) => {
+            return <li id={planet.name} className='individual-planet'>{planet.name}</li>;
+          })}
+      </ul>
     </div>
   );
 }

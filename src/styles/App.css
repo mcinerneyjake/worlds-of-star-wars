@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #090c0b;
+}
+
+.header-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.nav-header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  font-size: 2em;
+  border: 3px solid #ffffff;
+  width: auto;
+  margin: 10px 200px 20px 200px;
+}
+
+.nav-link {
+  margin: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgb(197, 197, 197);
+}
+
+.nav-link:active {
+  color: rgb(138, 138, 138);
+}
+
+.nav-link:visited {
+  color: #ffffff;
+}
+
+.planets-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fee81c;
+}
+
+.individual-planet {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+  border-radius: 6%;
+  list-style: none;
+}/*# sourceMappingURL=App.css.map */
