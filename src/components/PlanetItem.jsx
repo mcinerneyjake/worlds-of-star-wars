@@ -15,7 +15,6 @@ function PlanetItem({ planet }) {
           type: 'FETCH_RESIDENTS_OF_ONE_PLANET',
           payload: resident.slice(29),
         },
-        [dispatch]
       );
     }
     navigate('/residents');
