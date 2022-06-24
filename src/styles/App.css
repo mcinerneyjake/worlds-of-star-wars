@@ -81,6 +81,10 @@ html ::-webkit-scrollbar {
   font-size: 2.5rem;
 }
 
+.planet-details {
+  color: #ffffff;
+}
+
 .people-container {
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +97,16 @@ html ::-webkit-scrollbar {
 .individual-person {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fee81c;
   border-radius: 6%;
   list-style: none;
+  background-color: #090c0b;
+}
+
+.person-name {
+  font-size: 2.5rem;
+}
+
+.person-details {
+  color: #ffffff;
 }/*# sourceMappingURL=App.css.map */
