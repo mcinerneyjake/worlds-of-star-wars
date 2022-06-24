@@ -12,10 +12,10 @@ function Nav() {
         <Link to='/home' className='nav-link'>
           Home
         </Link>
-        <Link to='/planet-name' className='nav-link'>
+        <Link to='/planet' className='nav-link'>
           Planet
         </Link>
-        <Link to='/resident-name' className='nav-link'>
+        <Link to='/residents' className='nav-link'>
           Residents
         </Link>
         <Link to='/contact' className='nav-link'>
