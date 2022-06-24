@@ -32,9 +32,23 @@ function* fetchPeople() {
   }
 }
 
+function* fetchResidentsOfOnePlanet(action) {
+  try {
+    const person = yield axios.get(`/people/${action.payload}`);
+    console.log('GET one person:', person.data);
+    yield put({
+      type: 'SET_ONE_PERSON',
+      payload: person.data,
+    });
+  } catch (error) {
+    console.log('GET one person error:', error);
+  }
+}
+
 function* rootSaga() {
   yield takeEvery('FETCH_PLANETS', fetchPlanets);
   yield takeEvery('FETCH_PEOPLE', fetchPeople);
+  yield takeEvery('FETCH_RESIDENTS_OF_ONE_PLANET', fetchResidentsOfOnePlanet);
 }
 
 const planetReducer = (state = [], action) => {
@@ -51,12 +65,20 @@ const peopleReducer = (state = [], action) => {
   return state;
 };
 
+const residentsOfOnePlanetReducer = (state = [], action) => {
+  if (action.type === 'SET_ONE_PERSON') {
+    return action.payload;
+  }
+  return state;
+};
+
 const sagaMiddleware = createSagaMiddleware();
 
 const storeInstance = createStore(
   combineReducers({
     planetReducer,
     peopleReducer,
+    residentsOfOnePlanetReducer,
   }),
   applyMiddleware(sagaMiddleware, logger)
 );

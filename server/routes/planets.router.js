@@ -20,10 +20,8 @@ router.get('/', async (req, res) => {
       const next = response.data.next;
 
       allThePlanets.push(...results);
-      console.log('next*******************', next);
       url = next;
     }
-    console.log(allThePlanets);
     res.send(allThePlanets);
   } catch (error) {
     console.log('Error in GET all planets:', error);

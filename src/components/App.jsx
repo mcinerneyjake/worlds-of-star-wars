@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './Nav';
 import PlanetList from './PlanetList';
-import PeopleList from './PeopleList';
+import PeopleItem from './PeopleItem';
 import '../styles/App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
         <Routes>
           <Route path='/home' element={<PlanetList />} />
-          <Route path='/resident-name' element={<PeopleList />} />
+          <Route path='/residents' element={<PeopleItem />} />
         </Routes>
       </div>
     </Router>
