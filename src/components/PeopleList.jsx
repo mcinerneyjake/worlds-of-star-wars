@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import PeopleItem from './PeopleItem';
 import '../styles/App.css';
 
 function PeopleList() {
@@ -10,11 +11,7 @@ function PeopleList() {
       <ul>
         {people &&
           people.map((person) => {
-            return (
-              <li id={person.name} className='individual-person'>
-                {person.name}
-              </li>
-            );
+            return <PeopleItem id={person.name} person={person} />;
           })}
       </ul>
     </div>
