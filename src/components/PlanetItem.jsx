@@ -13,7 +13,7 @@ function PlanetItem({ planet }) {
       dispatch(
         {
           type: 'FETCH_RESIDENTS_OF_ONE_PLANET',
-          payload: resident.slice(29),
+          payload: [resident.slice(29)],
         },
         [dispatch]
       );

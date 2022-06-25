@@ -37,7 +37,7 @@ function* fetchResidentsOfOnePlanet(action) {
     const person = yield axios.get(`/people/${action.payload}`);
     console.log('GET one person:', person.data);
     yield put({
-      type: 'SET_ONE_PERSON',
+      type: 'SET_RESIDENT',
       payload: person.data,
     });
   } catch (error) {
@@ -66,7 +66,7 @@ const peopleReducer = (state = [], action) => {
 };
 
 const residentsOfOnePlanetReducer = (state = [], action) => {
-  if (action.type === 'SET_ONE_PERSON') {
+  if (action.type === 'SET_RESIDENT') {
     return action.payload;
   }
   return state;
