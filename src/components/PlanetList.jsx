@@ -18,8 +18,6 @@ function PlanetList() {
     });
   }, [dispatch]);
 
-  console.log(searchWord);
-
   return (
     <>
       <div className='search-input-container'>
@@ -45,11 +43,7 @@ function PlanetList() {
                 }
               })
               .map((planet) => {
-                return (
-                  <div>
-                    <PlanetItem id={planet.name} planet={planet} />
-                  </div>
-                );
+                return <PlanetItem id={planet.name} planet={planet} />;
               })}
         </ul>
       </div>
