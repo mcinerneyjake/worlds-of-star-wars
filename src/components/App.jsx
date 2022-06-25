@@ -13,7 +13,7 @@ function App() {
         <Nav />
 
         <Routes>
-          <Route path='/home' element={<PlanetList />} />
+          <Route path='/' element={<PlanetList />} />
           <Route path='/residents' element={<PeopleItem />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>

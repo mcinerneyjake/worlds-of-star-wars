@@ -85,7 +85,7 @@ html {
 }
 
 .individual-planet {
-  width: 1000px;
+  width: 500px;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid $starWarsYellow;
@@ -112,7 +112,7 @@ html {
 }
 
 .individual-person {
-  width: 300px;
+  width: 500px;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid $starWarsYellow;
@@ -127,6 +127,15 @@ html {
 
 .person-details {
   color: $starWarsWhite;
+}
+
+.resident-button {
+  height: 50px;
+  width: 200px;
+  margin: 15px 0px 15px 0px;
+  font-size: 1rem;
+  background-color: $starWarsYellow;
+  border: none;
 }
 
 .contact-container {
@@ -148,13 +157,18 @@ html {
   background-color: $starWarsBlack;
 }
 
+.my-name {
+  margin-bottom: 15px;
+}
+
 .headshot {
   height: auto;
   width: 250px;
+  margin-bottom: 15px;
 }
 
 .contact-link {
-  margin: 15px;
+  margin-bottom: 10px;
   color: $starWarsWhite;
   text-decoration: none;
 }

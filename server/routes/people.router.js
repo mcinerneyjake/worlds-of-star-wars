@@ -25,25 +25,25 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/:url', async (req, res) => {
-//   const getOnePerson = [];
+router.get('/:url', async (req, res) => {
+  const getOnePerson = [];
 
-//   console.log(req.params.url);
-//   console.log(req.query);
+  console.log('req.params********************************:', req.params);
 
-//   let url = `https://swapi.dev/api/people/${req.params.url}`;
-//   try {
-//     const response = await axios.get(url);
-//     // console.log('GET one person response:', response);
-//     const results = response.data;
-//     console.log('results:', results);
+  let url = `https://swapi.dev/api/people/${req.params.url}`;
+  try {
+    const response = await axios.get(url);
+    // console.log('GET one person response:', response);
+    const results = response.data;
+    console.log('results:', results);
+    // const next = response.data;
 
-//     getOnePerson.push(results);
+    getOnePerson.push(results);
 
-//     res.send(getOnePerson);
-//   } catch (error) {
-//     console.log('Error in GET one person:', error);
-//   }
-// });
+    res.send(getOnePerson);
+  } catch (error) {
+    console.log('Error in GET one person:', error);
+  }
+});
 
 module.exports = router;
