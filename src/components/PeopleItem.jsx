@@ -1,27 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import '../styles/App.css';
 
-function PeopleItem() {
-  const residents = useSelector((store) => store.residentsOfOnePlanetReducer);
-
-  return (
-    <div className='people-container'>
-      {residents &&
-        residents.map((person) => {
-          return (
-            <div id={person.name} className='individual-person'>
-              <h2 className='person-name'>{person.name}</h2>
-              <div className='person-details'>
-                <p>Birth Year: {person.birth_year}</p>
-                <p>Height: {person.height} cm</p>
-                <p>Mass: {person.mass} kg</p>
-              </div>
-            </div>
-          );
-        })}
-    </div>
-  );
+function PeopleItem(planet) {
+  if (planet.planet.url === planet.person.homeworld) {
+    return (
+      <div className='people-container'>
+        <div id={planet.person.name} className='individual-person'>
+          <h3>{planet.person.name}</h3>
+          <div className='person-details'>
+            <p>Birth Year: {planet.person.birth_year}</p>
+            <p>Height: {planet.person.height} cm</p>
+            <p>Mass: {planet.person.mass} kg</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default PeopleItem;
