@@ -9,7 +9,7 @@ function Nav() {
         <img src={worldsOfStarWars} alt='nav-img' />
       </div>
       <div className='nav-header'>
-        <Link to='/home' className='nav-link'>
+        <Link to='/' className='nav-link'>
           Planets
         </Link>
         <Link to='/residents' className='nav-link'>

@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
@@ -8,10 +7,6 @@ const app = express();
 // Route includes
 const planetsRouter = require('./routes/planets.router');
 const peopleRouter = require('./routes/people.router');
-
-// CORS
-app.use(cors());
-app.options('*', cors());
 
 // Body parser middleware
 app.use(bodyParser.json());
