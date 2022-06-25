@@ -56,6 +56,25 @@ html {
   color: $starWarsWhite;
 }
 
+.search-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-input {
+  margin: 5px 0px 25px 0px;
+  width: 300px;
+  height: 35px;
+  font-size: 1rem;
+  padding-left: 10px;
+  background-color: $starWarsBlack;
+  border: 2px solid $starWarsYellow;
+  color: $starWarsWhite;
+}
+
 .planets-container {
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +85,7 @@ html {
 }
 
 .individual-planet {
+  width: 500px;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid $starWarsYellow;
@@ -92,6 +112,7 @@ html {
 }
 
 .individual-person {
+  width: 500px;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid $starWarsYellow;
