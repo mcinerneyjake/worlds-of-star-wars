@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const allThePeople = [];
-  console.log('req.query', req.query)
 
   let url = 'https://swapi.dev/api/people';
   try {
