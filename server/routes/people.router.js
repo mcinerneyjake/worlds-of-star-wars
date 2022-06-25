@@ -30,16 +30,17 @@ router.get('/:url', async (req, res) => {
   const getOnePerson = [];
 
   console.log(req.params.url);
+  console.log(req.query);
 
   let url = `https://swapi.dev/api/people/${req.params.url}`;
   try {
     const response = await axios.get(url);
-    console.log('GET one person response:', response);
+    // console.log('GET one person response:', response);
     const results = response.data;
     console.log('results:', results);
 
     getOnePerson.push(results);
-    
+
     res.send(getOnePerson);
   } catch (error) {
     console.log('Error in GET one person:', error);

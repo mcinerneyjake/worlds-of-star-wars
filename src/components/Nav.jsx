@@ -10,10 +10,7 @@ function Nav() {
       </div>
       <div className='nav-header'>
         <Link to='/home' className='nav-link'>
-          Home
-        </Link>
-        <Link to='/planet' className='nav-link'>
-          Planet
+          Planets
         </Link>
         <Link to='/residents' className='nav-link'>
           Residents
