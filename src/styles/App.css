@@ -130,4 +130,46 @@ html ::-webkit-scrollbar {
 
 .person-details {
   color: #ffffff;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fee81c;
+}
+
+.contact-info {
+  width: 600px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border: 2px solid #fee81c;
+  border-radius: 6%;
+  list-style: none;
+  background-color: #090c0b;
+}
+
+.headshot {
+  height: auto;
+  width: 250px;
+}
+
+.contact-link {
+  margin: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: rgb(197, 197, 197);
+}
+
+.contact-link:active {
+  color: rgb(138, 138, 138);
+}
+
+.contact-link:visited {
+  color: #ffffff;
 }/*# sourceMappingURL=App.css.map */
