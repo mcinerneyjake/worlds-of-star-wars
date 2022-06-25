@@ -34,7 +34,7 @@ function* fetchPeople() {
 
 function* fetchResidentsOfOnePlanet(action) {
   try {
-    const person = yield axios.get(`/people/${action.payload}`);
+    const person = yield axios.get(`/people?peopleIds=1,3,4,5,8`);
     console.log('GET one person:', person.data);
     yield put({
       type: 'SET_ONE_PERSON',
