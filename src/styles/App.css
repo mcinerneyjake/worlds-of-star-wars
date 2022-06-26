@@ -34,17 +34,18 @@ html ::-webkit-scrollbar {
   text-align: center;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   font-size: 2rem;
-  border: 3px solid #ffffff;
   width: auto;
-  margin: 10px 300px 20px 300px;
+  margin: 10px 0px 20px 0px;
 }
 
 .nav-link {
   margin: 15px;
   color: #ffffff;
+  background-color: #090c0b;
   text-decoration: none;
+  border: 3px solid #ffffff;
+  padding: 20px;
 }
 
 .nav-link:hover {
@@ -152,6 +153,7 @@ html ::-webkit-scrollbar {
 
 .contact-info {
   width: 600px;
+  height: auto;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid #fee81c;
@@ -170,8 +172,11 @@ html ::-webkit-scrollbar {
   margin-bottom: 15px;
 }
 
+.contact-links {
+  margin-bottom: 30px;
+}
+
 .contact-link {
-  margin-bottom: 10px;
   color: #ffffff;
   text-decoration: none;
 }

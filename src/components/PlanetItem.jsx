@@ -15,17 +15,17 @@ function PlanetItem({ planet }) {
       people.filter((person) => {
         if (person.homeworld && person.homeworld === planet.url) {
           residentArray.push(person.url.slice(29));
-          dispatch({
-            type: 'FETCH_RESIDENTS_OF_ONE_PLANET',
-            payload: residentArray,
-          });
+            dispatch({
+              type: 'FETCH_RESIDENTS_OF_ONE_PLANET',
+              payload: residentArray,
+            });
+          console.log('residentArray on PlanetItem*&*&*&*&*&*&*&*&&*&*&*&*&*&*&*&', residentArray);
         } else {
           residentArray = [];
         }
         return residentArray;
       });
     navigate('/residents');
-    residentArray = [];
   };
 
   return (

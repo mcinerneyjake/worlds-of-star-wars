@@ -31,17 +31,18 @@ html {
   text-align: center;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   font-size: 2rem;
-  border: 3px solid $starWarsWhite;
   width: auto;
-  margin: 10px 300px 20px 300px;
+  margin: 10px 0px 20px 0px;
 }
 
 .nav-link {
   margin: 15px;
   color: $starWarsWhite;
+  background-color: $starWarsBlack;
   text-decoration: none;
+  border: 3px solid $starWarsWhite;
+  padding: 20px;
 }
 
 .nav-link:hover {
@@ -149,6 +150,7 @@ html {
 
 .contact-info {
   width: 600px;
+  height: auto;
   font-size: 1.5rem;
   margin-bottom: 20px;
   border: 2px solid $starWarsYellow;
@@ -167,8 +169,11 @@ html {
   margin-bottom: 15px;
 }
 
+.contact-links {
+  margin-bottom: 30px;
+}
+
 .contact-link {
-  margin-bottom: 10px;
   color: $starWarsWhite;
   text-decoration: none;
 }
