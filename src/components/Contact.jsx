@@ -9,14 +9,16 @@ function Contact() {
         <h1>Contact the Engineer</h1>
         <h2 className='my-name'>Jake McInerney</h2>
         <img className='headshot' src={headshot} alt='headshot'></img>
-        <h3>Github</h3>
-        <a href='https://github.com/mcinerneyjake' className='contact-link'>
-          github.com/mcinerneyjake
-        </a>
-        <h3>LinkedIn</h3>
-        <a href='https://www.linkedin.com/in/mcinerney-jake/' className='contact-link'>
-          linkedin.com/in/mcinerney-jake
-        </a>
+        <div className='contact-links'>
+          <h3>Github</h3>
+          <a href='https://github.com/mcinerneyjake' className='contact-link'>
+            github.com/mcinerneyjake
+          </a>
+          <h3>LinkedIn</h3>
+          <a href='https://www.linkedin.com/in/mcinerney-jake/' className='contact-link'>
+            linkedin.com/in/mcinerney-jake
+          </a>
+        </div>
       </div>
     </div>
   );
