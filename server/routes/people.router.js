@@ -25,6 +25,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET residents for a specific planet
+
 router.get('/:url', async (req, res) => {
   const getOnePerson = [];
 
@@ -33,10 +35,8 @@ router.get('/:url', async (req, res) => {
   let url = `https://swapi.dev/api/people/${req.params.url}`;
   try {
     const response = await axios.get(url);
-    // console.log('GET one person response:', response);
     const results = response.data;
     console.log('results:', results);
-    // const next = response.data;
 
     getOnePerson.push(results);
 

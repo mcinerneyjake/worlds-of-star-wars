@@ -13,21 +13,19 @@ function PlanetItem({ planet }) {
     people &&
       // eslint-disable-next-line array-callback-return
       people.filter((person) => {
-        if (planet.url === person.homeworld) {
+        if (person.homeworld && person.homeworld === planet.url) {
           residentArray.push(person.url.slice(29));
-          // console.log(residentArray);
-
           dispatch({
             type: 'FETCH_RESIDENTS_OF_ONE_PLANET',
             payload: residentArray,
           });
+        } else {
+          residentArray = [];
         }
         return residentArray;
       });
-
-    // console.log('resident.slice(29)**************************', resident.slice(29));
-
     navigate('/residents');
+    residentArray = [];
   };
 
   return (
