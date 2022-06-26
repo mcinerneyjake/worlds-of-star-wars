@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PlanetItem from './PlanetItem';
+import LoadingSpinner from './LoadingSpinner';
 import '../styles/App.css';
 
 function PlanetList() {
@@ -8,6 +9,7 @@ function PlanetList() {
   const planets = useSelector((store) => store.planetReducer);
 
   const [searchWord, setSearchWord] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     dispatch({
@@ -16,6 +18,9 @@ function PlanetList() {
     dispatch({
       type: 'FETCH_PEOPLE',
     });
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000);
   }, [dispatch]);
 
   return (
@@ -30,23 +35,32 @@ function PlanetList() {
           }}
         />
       </div>
-      <div className='planets-container'>
-        <ul>
-          {planets &&
-            planets
-              // eslint-disable-next-line array-callback-return
-              .filter((planet) => {
-                if (searchWord === '') {
-                  return planet;
-                } else if (planet.name.toLowerCase().includes(searchWord.toLowerCase())) {
-                  return planet;
-                }
-              })
-              .map((planet) => {
-                return <PlanetItem id={planet.name} planet={planet} />;
-              })}
-        </ul>
-      </div>
+
+      {isLoaded ? (
+        <div className='planets-container'>
+          <ul>
+            {planets &&
+              planets
+                // eslint-disable-next-line array-callback-return
+                .filter((planet) => {
+                  if (searchWord === '') {
+                    return planet;
+                  } else if (planet.name.toLowerCase().includes(searchWord.toLowerCase())) {
+                    return planet;
+                  }
+                })
+                .map((planet) => {
+                  return <PlanetItem id={planet.name} planet={planet} />;
+                })}
+          </ul>
+        </div>
+      ) : (
+        <>
+          <div className='planets-container'>
+            <LoadingSpinner />
+          </div>
+        </>
+      )}
     </>
   );
 }
