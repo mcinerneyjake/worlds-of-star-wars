@@ -10,30 +10,17 @@ $navBarHover: rgb(197, 197, 197);
 $navBarActive: rgb(138, 138, 138);
 
 // FONTS
-
 $bodyFont: Arial, Helvetica, sans-serif;
 
 // CONTAINERS
-
-@mixin planetsAndPeopleContainers {
+@mixin containers {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: $starWarsYellow;
-}
-
-@mixin individualPlanetsAndPeople {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  border: 2px solid #333;
-  border-radius: 6%;
-  list-style: none;
 }
 
 // HIDE SCROLL BAR
-
 @mixin scrollBar {
   overflow: scroll;
   overflow-x: hidden;

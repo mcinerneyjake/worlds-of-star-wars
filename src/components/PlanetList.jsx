@@ -5,9 +5,13 @@ import LoadingSpinner from './LoadingSpinner';
 import '../styles/App.css';
 
 function PlanetList() {
+  // use Methods
   const dispatch = useDispatch();
+
+  // Redux Reducer
   const planets = useSelector((store) => store.planetReducer);
 
+  // useState Functions
   const [searchWord, setSearchWord] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -26,6 +30,7 @@ function PlanetList() {
   return (
     <>
       <div className='search-input-container'>
+        {/* Search function for planets. */}
         <input
           type='text'
           placeholder='Search for a planet...'
@@ -57,6 +62,7 @@ function PlanetList() {
       ) : (
         <>
           <div className='planets-container'>
+            {/* Spinner for API request down-time. */}
             <LoadingSpinner />
           </div>
         </>

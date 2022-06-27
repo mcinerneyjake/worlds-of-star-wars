@@ -3,12 +3,13 @@ import { useSelector } from 'react-redux';
 import '../styles/App.css';
 
 function PeopleItem() {
-  const residents = useSelector((store) => store.residentsOfOnePlanetReducer);
+  // Redux Reducer
+  const people = useSelector((store) => store.residentsOfOnePlanetReducer);
 
   return (
     <div className='people-container'>
-      {residents &&
-        residents.map((person) => {
+      {people &&
+        people.map((person) => {
           return (
             <div id={person.name} className='individual-person'>
               <h2 className='person-name'>{person.name}</h2>

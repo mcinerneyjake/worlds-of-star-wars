@@ -8,6 +8,9 @@ import createSagaMiddleware from '@redux-saga/core';
 import { takeEvery, put } from '@redux-saga/core/effects';
 import axios from 'axios';
 
+// Saga Functions
+
+// fetch all planets
 function* fetchPlanets() {
   try {
     const planets = yield axios.get('/planets');
@@ -20,6 +23,7 @@ function* fetchPlanets() {
   }
 }
 
+// fetch all people
 function* fetchPeople() {
   try {
     const people = yield axios.get('/people');
@@ -32,6 +36,7 @@ function* fetchPeople() {
   }
 }
 
+// fetch residents of a specific planet
 function* fetchResidentsOfOnePlanet(action) {
   console.log(action.payload);
   try {
@@ -46,12 +51,14 @@ function* fetchResidentsOfOnePlanet(action) {
   }
 }
 
+// Root Saga
 function* rootSaga() {
   yield takeEvery('FETCH_PLANETS', fetchPlanets);
   yield takeEvery('FETCH_PEOPLE', fetchPeople);
   yield takeEvery('FETCH_RESIDENTS_OF_ONE_PLANET', fetchResidentsOfOnePlanet);
 }
 
+// Redux Reducers
 const planetReducer = (state = [], action) => {
   if (action.type === 'SET_PLANETS') {
     return action.payload;
@@ -73,8 +80,10 @@ const residentsOfOnePlanetReducer = (state = [], action) => {
   return state;
 };
 
+// Middleware
 const sagaMiddleware = createSagaMiddleware();
 
+// Store
 const storeInstance = createStore(
   combineReducers({
     planetReducer,
@@ -84,8 +93,10 @@ const storeInstance = createStore(
   applyMiddleware(sagaMiddleware, logger)
 );
 
+// rootSage Middleware
 sagaMiddleware.run(rootSaga);
 
+// Root
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -94,5 +105,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-// 'http://localhost:5000/planets'

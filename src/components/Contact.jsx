@@ -10,7 +10,7 @@ function Contact() {
         <h2 className='my-name'>Jake McInerney</h2>
         <img className='headshot' src={headshot} alt='headshot'></img>
         <div className='contact-links'>
-          <h3>Github</h3>
+          <h3>GitHub</h3>
           <a href='https://github.com/mcinerneyjake' className='contact-link'>
             github.com/mcinerneyjake
           </a>

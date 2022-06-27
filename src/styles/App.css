@@ -23,7 +23,7 @@ html ::-webkit-scrollbar {
 
 .header-container {
   display: flex;
-  text-align: center;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: auto;
@@ -31,7 +31,7 @@ html ::-webkit-scrollbar {
 
 .nav-header {
   display: flex;
-  text-align: center;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
@@ -133,7 +133,7 @@ html ::-webkit-scrollbar {
   color: #ffffff;
 }
 
-.resident-button {
+.person-button {
   height: 50px;
   width: 200px;
   margin: 15px 0px 15px 0px;
