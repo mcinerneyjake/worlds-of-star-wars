@@ -1,5 +1,4 @@
 const express = require('express');
-// const pool = require('../modules/pool');
 const axios = require('axios');
 const router = express.Router();
 
@@ -12,10 +11,6 @@ router.get('/', async (req, res) => {
   try {
     while (url) {
       const response = await axios.get(url);
-      // if (!response.ok) {
-      //   throw new Error('HTTP error', response.status);
-      // }
-      // const { results, next } = response.data;
       const results = response.data.results;
       const next = response.data.next;
 
@@ -27,6 +22,9 @@ router.get('/', async (req, res) => {
     console.log('Error in GET all planets:', error);
   }
 });
+
+// The code below was a starting point that was reworked into the paginated request above.
+// The same kind of GET request was used for all people, too.
 
 // // THIS WORKS FOR ONE PAGE GET REQUEST
 // router.get('/', async (req, res) => {

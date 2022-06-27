@@ -1,5 +1,6 @@
 @import '../sass-variables/Variables.scss';
 
+// DOCUMENT
 * {
   margin: 0px;
   padding: 0px;
@@ -18,24 +19,20 @@ html {
   @include scrollBar;
 }
 
+// HEADER
 .header-container {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   width: auto;
 }
 
 .nav-header {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   font-size: 2rem;
   width: auto;
   margin: 10px 0px 20px 0px;
 }
 
+// NAV
 .nav-link {
   margin: 15px;
   color: $starWarsWhite;
@@ -57,11 +54,9 @@ html {
   color: $starWarsWhite;
 }
 
+// SEARCH
 .search-input-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   text-align: center;
 }
 
@@ -76,11 +71,9 @@ html {
   color: $starWarsWhite;
 }
 
+// PLANETS
 .planets-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   text-align: center;
   color: $starWarsYellow;
 }
@@ -103,11 +96,9 @@ html {
   color: $starWarsWhite;
 }
 
+// PEOPLE
 .people-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   text-align: center;
   color: $starWarsYellow;
 }
@@ -130,7 +121,7 @@ html {
   color: $starWarsWhite;
 }
 
-.resident-button {
+.person-button {
   height: 50px;
   width: 200px;
   margin: 15px 0px 15px 0px;
@@ -139,11 +130,9 @@ html {
   border: none;
 }
 
+// CONTACT
 .contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  @include containers;
   text-align: center;
   color: $starWarsYellow;
 }
@@ -189,19 +178,3 @@ html {
 .contact-link:visited {
   color: $starWarsWhite;
 }
-
-// .planets-container {
-//   @include planetsAndPeopleContainers;
-// }
-
-// .individual-planet {
-//   @include individualPlanetsAndPeople;
-// }
-
-// .people-container {
-//   @include planetsAndPeopleContainers;
-// }
-
-// .individual-person {
-//   @include individualPlanetsAndPeople;
-// }

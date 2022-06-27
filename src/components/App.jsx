@@ -11,7 +11,6 @@ function App() {
     <Router>
       <div className='App'>
         <Nav />
-
         <Routes>
           <Route path='/' element={<PlanetList />} />
           <Route path='/residents' element={<PeopleItem />} />

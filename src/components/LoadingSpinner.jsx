@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import ClipLoader from 'react-spinners/ClipLoader';
 
+// Necessary Boilerplate for react-spinners library
 const override = css`
   display: block;
   margin: 0 auto;
@@ -9,6 +10,7 @@ const override = css`
 `;
 
 function LoadingSpinner() {
+  // useState Functions
   let [loading] = useState(true);
   let [color] = useState('#ffffff');
 
